@@ -55,7 +55,7 @@ const ProfileImageWrapper = styled(motion.div)`
     margin: 0 auto; /* Center image in its column on mobile */
     position: relative;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    border: 5px solid ${({ theme }) => theme.primary + '99'}; /* Primary border with alpha */
+    border: 5px solid #ad10e799; /* Primary border with alpha */
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
         width: 300px;
@@ -179,7 +179,7 @@ const HomePage = () => {
                             {/* Profile Image Column */}
                             <ProfileImageWrapper variants={imageVariants}>
                                 <ProfileImage
-                                    src="/images/profile.jpg" // <<< YOUR PROFILE IMAGE PATH HERE
+                                    src="/images/profile.png" // <<< YOUR PROFILE IMAGE PATH HERE
                                     alt={profile.name || "Profile Picture"}
                                     whileHover={{ scale: 1.05 }} // Slight zoom on hover
                                     transition={{ type: 'spring', stiffness: 300 }}

@@ -133,7 +133,7 @@ const AboutPage = () => {
             <ProfileSection animationType="fadeUp" duration={0.8}>
                 {/* Add a placeholder or actual image path */}
                 <ProfileImage
-                    src="/images/profile.jpg" // Replace with your actual image path
+                    src="/images/profile.png" // Replace with your actual image path
                     alt={profile.name}
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}

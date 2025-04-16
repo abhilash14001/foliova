@@ -272,7 +272,8 @@ const ContactPage = () => {
                             disabled={isSubmitting}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                        >
+                            style={{ color: ({theme}) => {return theme.mode === 'light' ? "#fff" : "#000"} }}
+                            >
                             {isSubmitting ? 'Sending...' : 'Send Message'}
                         </SubmitButton>
                     </StyledForm>
