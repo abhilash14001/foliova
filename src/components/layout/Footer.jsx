@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="container">
         {/* Add Social Links Here */}
         <FooterText>
-          © {new Date().getFullYear()} Your Name/Brand. All Rights Reserved.
+          © {new Date().getFullYear()} Foliova. All Rights Reserved.
         </FooterText>
         {/* Optional: Link back to ThemeForest or your site */}
       </div>
