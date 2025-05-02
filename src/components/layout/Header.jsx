@@ -112,7 +112,7 @@ const Header = () => {
             animate="visible"
         >
             <Nav>
-                <LogoLink to="/">MyPortfolio</LogoLink>
+                <LogoLink to="/">Foliova</LogoLink>
                 <NavLinks>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
