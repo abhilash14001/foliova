@@ -179,7 +179,7 @@ const HomePage = () => {
                             {/* Profile Image Column */}
                             <ProfileImageWrapper variants={imageVariants}>
                                 <ProfileImage
-                                    src="/images/profile.png" // <<< YOUR PROFILE IMAGE PATH HERE
+                                    src="/images/profiles.png" // <<< YOUR PROFILE IMAGE PATH HERE
                                     alt={profile.name || "Profile Picture"}
                                     whileHover={{ scale: 1.05 }} // Slight zoom on hover
                                     transition={{ type: 'spring', stiffness: 300 }}
