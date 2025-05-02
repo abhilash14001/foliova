@@ -16,7 +16,7 @@ Foliova is a modern, responsive portfolio template built with React and styled-c
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/foliova.git
+   git clone https://github.com/abhilash14001/foliova.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -76,10 +76,10 @@ src/
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
-Your Name - [Your Email](mailto:your.email@example.com)
+Your Name - [Your Email](mailto:abhilash14001@gmail.com)
 
 ## Support
-For support, email [your.email@example.com](mailto:your.email@example.com) or open an issue in the GitHub repository.
+For support, email [abhilash14001@gmail.com](mailto:abhilash14001@gmail.com) or open an issue in the GitHub repository.
 
 ## Credits
 - Icons: [React Icons](https://react-icons.github.io/react-icons/)
