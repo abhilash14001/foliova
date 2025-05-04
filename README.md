@@ -15,30 +15,35 @@ Foliova is a modern, responsive portfolio template built with React and styled-c
 
 ## Installation
 1. Clone the repository:
-   ```bash
+   
+bash
    git clone https://github.com/abhilash14001/foliova.git
-   ```
+
 2. Navigate to the project directory:
-   ```bash
+   
+bash
    cd foliova
-   ```
+
 3. Install dependencies:
-   ```bash
+   
+bash
    npm install
-   ```
+
 4. Start the development server:
-   ```bash
+   
+bash
    npm run dev
-   ```
+
 
 ## Usage
-1. Customize the content in `src/data/portfolioData.js` with your personal information
-2. Replace images in the `public/images` directory with your own
-3. Modify the theme colors in `src/styles/theme.js` to match your brand
+1. Customize the content in src/data/portfolioData.js with your personal information
+2. Replace images in the public/images directory with your own
+3. Modify the theme colors in src/styles/theme.js to match your brand
 4. Build for production:
-   ```bash
+   
+bash
    npm run build
-   ```
+
 
 ## Dependencies
 - React 19
@@ -56,7 +61,6 @@ Foliova is a modern, responsive portfolio template built with React and styled-c
 - React Hooks ESLint Plugin
 
 ## Project Structure
-```
 src/
 ├── components/     # Reusable UI components
 ├── pages/         # Page components
@@ -64,19 +68,19 @@ src/
 ├── data/          # Portfolio content data
 ├── hooks/         # Custom React hooks
 └── utils/         # Utility functions
-```
+
 
 ## Customization
-- Edit `src/data/portfolioData.js` to update your personal information
-- Modify `src/styles/theme.js` to change colors and styling
-- Add or remove sections in `src/pages/`
-- Customize animations in `src/components/animations/`
+- Edit src/data/portfolioData.js to update your personal information
+- Modify src/styles/theme.js to change colors and styling
+- Add or remove sections in src/pages/
+- Customize animations in src/components/animations/
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
-Your Name - [Your Email](mailto:abhilash14001@gmail.com)
+Abhilash - [Your Email](mailto:abhilash14001@gmail.com)
 
 ## Support
 For support, email [abhilash14001@gmail.com](mailto:abhilash14001@gmail.com) or open an issue in the GitHub repository.
