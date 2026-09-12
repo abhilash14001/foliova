@@ -15,7 +15,7 @@ export const projects = [
         id: 1,
         title: "Ecommerce Project",
         description: "A responsive online store with product browsing, cart management, secure checkout, and order tracking.",
-        imageUrl: "https://abhilashr.netlify.app/images/shopalic.png", // Path relative to public folder or import image
+        imageUrl: "/images/ecommerce-electronics.webp", // Path relative to public folder or import image
         tags: ["React", "NodeJs", "MongoDB"],
         liveUrl: "#",
         repoUrl: "#",
@@ -24,7 +24,7 @@ export const projects = [
         id: 2,
         title: "Admin Dashboard",
         description: "A Laravel-powered dashboard for managing users, business data, reports, and daily operations from one place.",
-        imageUrl: "https://codewithabhilash.com/img/portfolio-3.jpg",
+        imageUrl: "/images/admin-dashboard.webp",
         tags: ["Laravel", "HTML", "CSS", "PHP"],
         liveUrl: "#",
         repoUrl: "#",
@@ -51,7 +51,7 @@ export const projects = [
         id: 5,
         title: "Ecommerce Project",
         description: "A Laravel ecommerce platform with product catalogues, customer accounts, shopping cart, and order management.",
-        imageUrl: "/images/shopalic.png",
+        imageUrl: "/images/ecommerce-fashion.webp",
         tags: ["PHP", "Laravel"],
         liveUrl: "#",
         repoUrl: "#",
