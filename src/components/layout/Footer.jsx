@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="container">
         {/* Add Social Links Here */}
         <FooterText>
-          © {new Date().getFullYear()} Foliova. All Rights Reserved.
+          © {new Date().getFullYear()} Abhilash R. Built with React and care.
         </FooterText>
         {/* Optional: Link back to ThemeForest or your site */}
       </div>
