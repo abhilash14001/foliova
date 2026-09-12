@@ -41,8 +41,34 @@ const NavLinks = styled.ul`
   gap: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    /* Basic example: Hide on small screens, implement burger menu later */
-    display: none;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 5%;
+    right: 5%;
+    display: ${({ $isOpen }) => $isOpen ? 'flex' : 'none'};
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: ${({ theme }) => theme.cardBg};
+    box-shadow: ${({ theme }) => theme.cardShadow};
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      padding: 0.85rem 1rem;
+    }
+
+    li:last-child {
+      display: flex;
+      justify-content: center;
+      padding: 0.65rem;
+      border-top: 1px solid ${({ theme }) => theme.mode === 'light' ? '#e0e0e0' : '#333'};
+    }
   }
 `;
 
@@ -74,21 +100,33 @@ const NavLink = styled(Link)`
 
 // Add a Mobile Menu Toggle button here for responsiveness
 const MobileMenuToggle = styled.button`
-    display: none; // Show only on small screens
-    background: none;
-    border: none;
+    display: none;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid ${({ theme }) => theme.mode === 'light' ? '#d7dce1' : '#444'};
+    border-radius: 8px;
     color: ${({ theme }) => theme.text};
     font-size: 1.5rem;
+    line-height: 1;
     cursor: pointer;
 
+    &:focus-visible {
+      outline: 2px solid ${({ theme }) => theme.primary};
+      outline-offset: 2px;
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-        display: block;
+        display: inline-flex;
     }
 `;
 
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -97,6 +135,8 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const closeMenu = () => setMenuOpen(false);
 
     // Framer Motion variants for header animation
     const headerVariants = {
@@ -114,16 +154,21 @@ const Header = () => {
             <Nav>
                 <LogoLink to="/">
                 Abhilash R.</LogoLink>
-                <NavLinks>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/projects">Projects</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
+                <NavLinks $isOpen={menuOpen}>
+                    <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+                    <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
+                    <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
+                    <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
                     <li><ThemeToggle /></li>
                 </NavLinks>
-                {/* Add Mobile Menu Toggle functionality later */}
-                 <MobileMenuToggle>☰</MobileMenuToggle>
-                 {/* Add ThemeToggle also for mobile if needed */}
+                <MobileMenuToggle
+                    type="button"
+                    aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                    aria-expanded={menuOpen}
+                    onClick={() => setMenuOpen((isOpen) => !isOpen)}
+                >
+                    {menuOpen ? '×' : '☰'}
+                </MobileMenuToggle>
             </Nav>
         </HeaderContainer>
     );
