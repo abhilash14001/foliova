@@ -120,8 +120,8 @@ const HomePage = () => {
     const handleMouseMove = (event) => { /* ... */ const { clientX, clientY } = event; const x = clientX - window.innerWidth / 2; const y = clientY - window.innerHeight / 2; mouseX.set(x); mouseY.set(y); };
     const [showScrollIndicator, setShowScrollIndicator] = useState(true);
     useEffect(() => { /* ... */ const handleScroll = () => { if (window.scrollY > 100) { setShowScrollIndicator(false); } else { setShowScrollIndicator(true); } }; window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
-    const headingText = "Build Stunning Web Experiences";
-    const subtitleText = profile.title || "Creative Frontend Developer | UI/UX Enthusiast | Problem Solver";
+    const headingText = "Reliable Web Applications Built for Business";
+    const subtitleText = profile.title;
 
 
     // --- Animation Variants for About Section ---
@@ -167,7 +167,7 @@ const HomePage = () => {
                 <div className="container">
                     {/* Using AnimatedSection to trigger the grid animation */}
                     <AnimatedSection amount={0.2} once={true}>
-                        <SectionTitle variants={wordVariants} initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}}>About Me Briefly</SectionTitle>
+                        <SectionTitle variants={wordVariants} initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}}>About Abhilash</SectionTitle>
 
                         {/* Apply grid layout and staggering variants */}
                         <AboutGrid
@@ -189,7 +189,7 @@ const HomePage = () => {
                             {/* Text Content Column */}
                             <AboutTextWrapper variants={textVariants}>
                                 <p>
-                                    A dedicated and creative developer passionate about building beautiful and functional web applications. Exploring new technologies and crafting intuitive user experiences is what drives me. Let's create something amazing together.
+                                    With 5 years of PHP and Laravel experience, I build secure APIs, business platforms, dashboards, and responsive web applications. My work covers backend architecture, MySQL and Redis optimisation, third-party integrations, deployment, and dependable production support.
                                 </p>
                                 <Link to="/about" style={{ textDecoration: 'none' }}>
                                     <TempButton whileTap={{ scale: 0.95 }}>Learn More</TempButton>
@@ -207,15 +207,15 @@ const HomePage = () => {
                          <motion.div variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
                             <SectionTitle variants={wordVariants}>Featured Project</SectionTitle>
                             <SectionContent variants={wordVariants}>
-                                Highlighting a project that showcases my skills in React, modern styling, and creating engaging user interfaces.
+                                A practical booking application that demonstrates full-stack development, responsive interface design, and a straightforward reservation experience.
                             </SectionContent>
                             <FeaturedProjectCard variants={wordVariants}>
                                 <FeaturedImageWrapper initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, delay: 0.3 }}>
                                     <img src="/images/cafe.png" alt="Featured Project" />
                                 </FeaturedImageWrapper>
                                 <FeaturedContentWrapper>
-                                    <motion.h3 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}> Cafe Management System </motion.h3>
-                                    <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}> A simple cafe management system built with React, styled-components, and framer-motion. </motion.p>
+                                    <motion.h3 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}> Cafe Table Booking System </motion.h3>
+                                    <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}> A responsive reservation application where customers can select a date, time, and table, supported by a Node.js, Express, and MongoDB backend. </motion.p>
                                     <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.6 }}>
                                         <Link to="/projects" style={{ textDecoration: 'none' }}><TempButton whileTap={{ scale: 0.95 }}>See All Projects</TempButton></Link>
                                     </motion.div>
