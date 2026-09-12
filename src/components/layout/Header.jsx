@@ -113,7 +113,7 @@ const Header = () => {
         >
             <Nav>
                 <LogoLink to="/">
-                Foliova</LogoLink>
+                Abhilash R.</LogoLink>
                 <NavLinks>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
