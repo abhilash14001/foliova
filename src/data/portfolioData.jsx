@@ -15,7 +15,7 @@ export const projects = [
         id: 1,
         title: "Ecommerce Project",
         description: "A responsive online store with product browsing, cart management, secure checkout, and order tracking.",
-        imageUrl: "https://codewithabhilash.com/img/portfolio-2.jpg", // Path relative to public folder or import image
+        imageUrl: "https://abhilashr.netlify.app/images/shopalic.png", // Path relative to public folder or import image
         tags: ["React", "NodeJs", "MongoDB"],
         liveUrl: "#",
         repoUrl: "#",
