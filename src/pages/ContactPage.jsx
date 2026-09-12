@@ -154,32 +154,20 @@ const ContactPage = () => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus(null);
-        console.log("Form Data:", formData); // Log for now
-
-        // --- Replace with actual form submission logic ---
-        // Example using fetch (e.g., to Netlify Functions, Formspree, or your backend)
         try {
-             // const response = await fetch('/.netlify/functions/submit-form', { // Example endpoint
-             //     method: 'POST',
-             //     headers: { 'Content-Type': 'application/json' },
-             //     body: JSON.stringify(formData),
-             // });
-             // if (!response.ok) throw new Error('Network response was not ok');
-             // const result = await response.json();
-
-            // Simulate submission delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
-
+            const subject = encodeURIComponent(`Portfolio enquiry from ${formData.name}`);
+            const body = encodeURIComponent(
+                `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+            );
+            window.location.href = `mailto:${profile.contact.email}?subject=${subject}&body=${body}`;
             setSubmitStatus('success');
-            setFormData({ name: '', email: '', message: '' }); // Clear form
-
+            setFormData({ name: '', email: '', message: '' });
         } catch (error) {
-            console.error("Submission error:", error);
+            console.error("Unable to open email client:", error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
         }
-        // --- End of submission logic ---
     };
 
      // Variants for list items animation
@@ -198,8 +186,7 @@ const ContactPage = () => {
                 <ContactInfo animationType="slideInLeft" duration={0.7} delay={0.2}>
                     <h2>Contact Information</h2>
                     <p>
-                        Feel free to reach out via email or connect with me on social platforms.
-                        I'm always open to discussing new projects or opportunities.
+                        Have a Laravel, PHP, API, database, or full-stack project in mind? Email me with your requirements, timeline, and current technical challenges. I am available for freelance projects and remote opportunities.
                     </p>
                     <InfoList
                         as={motion.ul} // Use motion.ul for stagger
@@ -264,8 +251,8 @@ const ContactPage = () => {
                             />
                         </InputGroup>
 
-                         {submitStatus === 'success' && <p style={{ color: 'green' }}>Message sent successfully!</p>}
-                        {submitStatus === 'error' && <p style={{ color: 'red' }}>Failed to send message. Please try again.</p>}
+                         {submitStatus === 'success' && <p style={{ color: 'green' }}>Your email application has been opened. Please review and send the message.</p>}
+                        {submitStatus === 'error' && <p style={{ color: 'red' }}>Unable to open your email application. Please email me directly.</p>}
 
                         <SubmitButton
                             type="submit"
