@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components'; // Import css helper
 import { motion } from 'framer-motion';
-import { FaLink, FaGithub } from 'react-icons/fa';
+import { FaLink } from 'react-icons/fa';
 
 // --- Card Container (Should already exist) ---
 const CardContainer = styled(motion.div)`
@@ -148,7 +148,7 @@ const IconLink = styled.a`
 
 // --- ProjectCard Component ---
 const ProjectCard = ({ project }) => {
-  const { title, description, imageUrl, tags, liveUrl, repoUrl } = project;
+  const { title, description, imageUrl, tags, liveUrl } = project;
 
   return (
     <CardContainer>
@@ -174,11 +174,6 @@ const ProjectCard = ({ project }) => {
           {liveUrl && liveUrl !== '#' && (
             <IconLink $isPrimary href={liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${title} Live Demo`} title="Live Demo">
               <FaLink />
-            </IconLink>
-          )}
-          {repoUrl && repoUrl !== '#' && (
-            <IconLink href={repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${title} GitHub Repository`} title="GitHub Repository">
-              <FaGithub />
             </IconLink>
           )}
         </CardLinks>
