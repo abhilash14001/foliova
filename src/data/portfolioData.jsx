@@ -14,7 +14,7 @@ export const projects = [
     {
         id: 1,
         title: "Ecommerce Project",
-        description: "A brief description of the first project.",
+        description: "A responsive online store with product browsing, cart management, secure checkout, and order tracking.",
         imageUrl: "https://codewithabhilash.com/img/portfolio-2.jpg", // Path relative to public folder or import image
         tags: ["React", "NodeJs", "MongoDB"],
         liveUrl: "#",
@@ -23,7 +23,7 @@ export const projects = [
     {
         id: 2,
         title: "Admin Dashboard",
-        description: "Description for the second awesome project.",
+        description: "A Laravel-powered dashboard for managing users, business data, reports, and daily operations from one place.",
         imageUrl: "https://codewithabhilash.com/img/portfolio-3.jpg",
         tags: ["Laravel", "HTML", "CSS", "PHP"],
         liveUrl: "#",
@@ -32,7 +32,7 @@ export const projects = [
     {
         id: 3,
         title: "Cafe Table Booking System",
-        description: "Description for the second awesome project.",
+        description: "An online reservation system that lets customers choose a date, time, and table while staff manage bookings.",
         imageUrl: "/images/cafe.png",
         tags: ["ReactJs", "MongoDB", "NodeJs", 'Express'],
         liveUrl: "#",
@@ -41,7 +41,7 @@ export const projects = [
     {
         id: 4,
         title: "Medical Website",
-        description: "Medical Website for a hospital.",
+        description: "A patient-friendly hospital website presenting departments, doctors, healthcare services, and appointment information.",
         imageUrl: "/images/medical.png",
         tags: ["ReactJs", "NodeJs", "MongoDB"],
         liveUrl: "#",
@@ -50,7 +50,7 @@ export const projects = [
     {
         id: 5,
         title: "Ecommerce Project",
-        description: "Description for the second awesome project.",
+        description: "A Laravel ecommerce platform with product catalogues, customer accounts, shopping cart, and order management.",
         imageUrl: "/images/shopalic.png",
         tags: ["PHP", "Laravel"],
         liveUrl: "#",
@@ -59,7 +59,7 @@ export const projects = [
     {
         id: 6,
         title: "Hotel Management System",
-        description: "Description for the second awesome project.",
+        description: "A responsive hotel website showcasing rooms, amenities, photo galleries, and contact details for prospective guests.",
         imageUrl: "/images/justinn.png",
         tags: ["HTML", "CSS", "JavaScript"],
         liveUrl: "#",
